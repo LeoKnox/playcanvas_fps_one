@@ -20,9 +20,11 @@ if(app.keyboard.isPressed(pc.input.KEY_LEFT)) {
 }
 if(app.keyboard.isPressed(pc.input.KEY_RIGHT)) {
     this.entity.translateLocal(0.1,0,0);
-}if(app.keyboard.isPressed(pc.input.KEY_UP)) {
+}
+if(app.keyboard.isPressed(pc.input.KEY_UP)) {
     this.entity.translateLocal(0,0.1,0);
-}if(app.keyboard.isPressed(pc.input.KEY_DOWN)) {
+}
+if(app.keyboard.isPressed(pc.input.KEY_DOWN)) {
     this.entity.translateLocal(0,-0.1,0);
 }
 
@@ -38,11 +40,11 @@ if (this.PlayerPos.y <-7.0) {
 if (this.PlayerPos.y <7.0) {
     this.entity.rigidbody.teleport( this. playerPos.x,7,  this.playPos.z);
 }
-}
 
 if (app.keyboard.wasPressed(pc.KEY_R)) {
     this.reset();
 }
+
 
 Box.prototype.reset = function() {
     this.entity.rigidBody.teleport(0,2,0);
