@@ -40,7 +40,7 @@ if (this.PlayerPos.y <7.0) {
 }
 
 
-if (app.keyboard.wasPressed(pc.KEY_R) {
+if (app.keyboard.wasPressed(pc.KEY_R)) {
     this.reset();
 }
 
