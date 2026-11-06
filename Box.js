@@ -12,10 +12,10 @@ Box.prototype.onKeyDown = function (event) {
 
 // update code called every frame
 Box.prototype.update = function(dt) {
-this.PlayerPos =this.entity.getLocalPosition();
+this.playerPos =this.entity.getLocalPosition();
 
 var app = this.app;
-if(app.keyboard.isPressed(pc.input.EVENT_KEYLEFT)) {
+if(app.keyboard.isPressed(pc.input.KEY_LEFT)) {
     this.entity.translateLocal(-0.1,0,0);
 }
 if(app.keyboard.isPressed(pc.input.KEY_RIGHT)) {
@@ -29,16 +29,16 @@ if(app.keyboard.isPressed(pc.input.KEY_DOWN)) {
 }
 
     if (this.playerPos.x <-9.0) {
-    this.entity.rigidbody.teleport( -9, this. playerPos.y, this.playPos.z);
+    this.entity.rigidbody.teleport( -9, this. playerPos.y, this.playerPos.z);
 }
     if (this.playerPos.x > 9.0) {
-    this.entity.rigidbody.teleport( 9, this. playerPos.y, this.playPos.z);
+    this.entity.rigidbody.teleport( 9, this. playerPos.y, this.playerPos.z);
 }
     if (this.playerPos.y <-7.0) {
-    this.entity.rigidbody.teleport( this. playerPos.x,-7,  this.playPos.z);
+    this.entity.rigidbody.teleport( this. playerPos.x,-7,  this.playerPos.z);
 }
-    if (this.layerPos.y >7.0) {
-    this.entity.rigidbody.teleport( this. playerPos.x,7,  this.playPos.z);
+    if (this.playerPos.y >7.0) {
+    this.entity.rigidbody.teleport( this. playerPos.x,7,  this.playerPos.z);
 }
 
     if (app.keyboard.wasPressed(pc.KEY_R)) {
