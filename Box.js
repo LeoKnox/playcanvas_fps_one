@@ -15,7 +15,7 @@ Box.prototype.update = function(dt) {
 this.PlayerPos =this.entity.getLocalPosition();
 
 var app = this.app;
-if(app.keyboard.isPressed(pc.input.KEY_LEFT)) {
+if(app.keyboard.isPressed(pc.input.EVENT_KEYLEFT)) {
     this.entity.translateLocal(-0.1,0,0);
 }
 if(app.keyboard.isPressed(pc.input.KEY_RIGHT)) {
