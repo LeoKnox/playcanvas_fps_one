@@ -18,13 +18,13 @@ var app = this.app;
 if(app.keyboard.isPressed(pc.KEY_LEFT)) {
     this.entity.translateLocal(-0.1,0,0);
 }
-if(app.keyboard.isPressed(pc.input.KEY_RIGHT)) {
+if(app.keyboard.isPressed(pc.KEY_RIGHT)) {
     this.entity.translateLocal(0.1,0,0);
 }
-if(app.keyboard.isPressed(pc.input.KEY_UP)) {
+if(app.keyboard.isPressed(pc.KEY_UP)) {
     this.entity.translateLocal(0,0.1,0);
 }
-if(app.keyboard.isPressed(pc.input.KEY_DOWN)) {
+if(app.keyboard.isPressed(pc.KEY_DOWN)) {
     this.entity.translateLocal(0,-0.1,0);
 }
 
@@ -41,7 +41,7 @@ if(app.keyboard.isPressed(pc.input.KEY_DOWN)) {
     this.entity.rigidbody.teleport( this. playerPos.x,7,  this.playerPos.z);
 }
 
-    if (app.keyboard.wasPressed(pc.input.KEY_R)) {
+    if (app.keyboard.wasPressed(pc.KEY_R)) {
     this.reset();
 }
 };
