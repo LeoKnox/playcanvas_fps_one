@@ -41,13 +41,13 @@ if(app.keyboard.isPressed(pc.input.KEY_DOWN)) {
     this.entity.rigidbody.teleport( this. playerPos.x,7,  this.playerPos.z);
 }
 
-    if (app.keyboard.wasPressed(pc.KEY_R)) {
+    if (app.keyboard.wasPressed(pc.input.KEY_R)) {
     this.reset();
 }
 };
 
 Box.prototype.reset = function() {
-    this.entity.rigidBody.teleport(0,2,0);
-    this.entity.rigidbody.linearVelocity = pc.vec3.ZERO;
-    this.entity.rigidbody.angularVelocity = pc.vec3.ZERO;
+    this.entity.rigidbody.teleport(0,2,0);
+    this.entity.rigidbody.linearVelocity = pc.Vec3.ZERO;
+    this.entity.rigidbody.angularVelocity = pc.Vec3.ZERO;
 }
