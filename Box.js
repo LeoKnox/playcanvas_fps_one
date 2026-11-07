@@ -36,10 +36,10 @@ if(app.keyboard.isPressed(pc.KEY_D)) {
 
 var pos = this.entity.getLocalPosition();
 
-if (pos.x < -9) pos.x = -9;
-if (pos.x > 9)  pos.x = 9;
-if (pos.z < -7) pos.z = -7;
-if (pos.z > 7)  pos.z = 7;
+if (pos.x < -9) pos.x = 9;
+if (pos.x > 9)  pos.x = -9;
+if (pos.z < -7) pos.z = 7;
+if (pos.z > 7)  pos.z = -7;
 
 this.entity.setLocalPosition(pos);
 
