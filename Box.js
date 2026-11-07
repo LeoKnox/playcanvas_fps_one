@@ -27,6 +27,9 @@ if(app.keyboard.isPressed(pc.KEY_UP)) {
 if(app.keyboard.isPressed(pc.KEY_DOWN)) {
     this.entity.translateLocal(0,0,0.1);
 }
+if(app.keyboard.isPressed(pc.KEY_Q)) {
+    this.entity.rotateLocal(0,5,0)
+}
 
     if (this.playerPos.x <-9.0) {
     this.entity.rigidbody.teleport( -9, this. playerPos.y, this.playerPos.z);
