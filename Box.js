@@ -38,8 +38,8 @@ var pos = this.entity.getLocalPosition();
 
 if (pos.x < -9) pos.x = -9;
 if (pos.x > 9)  pos.x = 9;
-if (pos.y < -7) pos.y = -7;
-if (pos.y > 7)  pos.y = 7;
+if (pos.z < -7) pos.z = -7;
+if (pos.z > 7)  pos.z = 7;
 
 this.entity.setLocalPosition(pos);
 
