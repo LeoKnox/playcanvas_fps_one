@@ -49,7 +49,5 @@ this.entity.setLocalPosition(pos);
 };
 
 Box.prototype.reset = function() {
-    this.entity.rigidbody.teleport(0,2,0);
-    this.entity.rigidbody.linearVelocity = pc.Vec3.ZERO;
-    this.entity.rigidbody.angularVelocity = pc.Vec3.ZERO;
+    this.entity.setLocalPosition(0, 2, 0);
 }
