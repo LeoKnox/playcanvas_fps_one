@@ -48,7 +48,12 @@ this.entity.setLocalPosition(pos);
 }
 };
 
+Box.prototype.initialize = function() {
+    this.startPosition = this.entity.getLocalPosition().clone();
+    this.startRotation = this.entity.getLocalRotation().clone();
+};
+console.log(this.startRotation);
 Box.prototype.reset = function() {
-    this.entity.setLocalPosition(0, 2, 0);
-    this.entity.setLocalRotation(0,0,0);
-}
+    this.entity.setLocalPosition(this.startPosition);
+    this.entity.setLocalRotation(this.startRotation);
+};
