@@ -15,20 +15,23 @@ Box.prototype.update = function(dt) {
 this.playerPos =this.entity.getLocalPosition();
 
 var app = this.app;
-if(app.keyboard.isPressed(pc.KEY_LEFT)) {
+if(app.keyboard.isPressed(pc.KEY_A)) {
     this.entity.translateLocal(-0.1,0,0);
 }
-if(app.keyboard.isPressed(pc.KEY_RIGHT)) {
+if(app.keyboard.isPressed(pc.KEY_D)) {
     this.entity.translateLocal(0.1,0,0);
 }
-if(app.keyboard.isPressed(pc.KEY_UP)) {
+if(app.keyboard.isPressed(pc.KEY_W)) {
     this.entity.translateLocal(0,0,-0.1);
 }
-if(app.keyboard.isPressed(pc.KEY_DOWN)) {
+if(app.keyboard.isPressed(pc.KEY_S)) {
     this.entity.translateLocal(0,0,0.1);
 }
 if(app.keyboard.isPressed(pc.KEY_Q)) {
     this.entity.rotateLocal(0,5,0)
+}
+if(app.keyboard.isPressed(pc.KEY_E)) {
+    this.entity.rotateLocal(0,-5,0)
 }
 
     if (this.playerPos.x <-9.0) {
