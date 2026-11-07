@@ -34,18 +34,14 @@ if(app.keyboard.isPressed(pc.KEY_D)) {
     this.entity.rotateLocal(0,-5,0)
 }
 
-    if (this.playerPos.x <-9.0) {
-    this.entity.rigidbody.teleport( -9, this. playerPos.y, this.playerPos.z);
-}
-    if (this.playerPos.x > 9.0) {
-    this.entity.rigidbody.teleport( 9, this. playerPos.y, this.playerPos.z);
-}
-    if (this.playerPos.y <-7.0) {
-    this.entity.rigidbody.teleport( this. playerPos.x,-7,  this.playerPos.z);
-}
-    if (this.playerPos.y >7.0) {
-    this.entity.rigidbody.teleport( this. playerPos.x,7,  this.playerPos.z);
-}
+var pos = this.entity.getLocalPosition();
+
+if (pos.x < -9) pos.x = -9;
+if (pos.x > 9)  pos.x = 9;
+if (pos.y < -7) pos.y = -7;
+if (pos.y > 7)  pos.y = 7;
+
+this.entity.setLocalPosition(pos);
 
     if (app.keyboard.wasPressed(pc.KEY_R)) {
     this.reset();
