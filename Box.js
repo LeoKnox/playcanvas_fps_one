@@ -22,10 +22,10 @@ if(app.keyboard.isPressed(pc.KEY_RIGHT)) {
     this.entity.translateLocal(0.1,0,0);
 }
 if(app.keyboard.isPressed(pc.KEY_UP)) {
-    this.entity.translateLocal(0,0,0.1);
+    this.entity.translateLocal(0,0,-0.1);
 }
 if(app.keyboard.isPressed(pc.KEY_DOWN)) {
-    this.entity.translateLocal(0,0,-0.1);
+    this.entity.translateLocal(0,0,0.1);
 }
 
     if (this.playerPos.x <-9.0) {
