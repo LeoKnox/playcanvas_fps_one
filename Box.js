@@ -50,4 +50,5 @@ this.entity.setLocalPosition(pos);
 
 Box.prototype.reset = function() {
     this.entity.setLocalPosition(0, 2, 0);
+    this.entity.setLocalRotation(0,0,0);
 }
