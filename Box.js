@@ -19,9 +19,8 @@ var app = this.app;
 
 
 if(app.keyboard.isPressed(pc.KEY_Q)) {
-    while (pos.x +1 < this.entity.getLocalPosition().x) {
     this.entity.translateLocal(-0.1,0,0);
-    }
+    return;
 }
 if(app.keyboard.isPressed(pc.KEY_E)) {
     this.entity.translateLocal(0.1,0,0);
