@@ -12,13 +12,16 @@ Box.prototype.onKeyDown = function (event) {
 
 // update code called every frame
 Box.prototype.update = function(dt) {
+    var pos = this.entity.getLocalPosition();
 this.playerPos =this.entity.getLocalPosition();
 
 var app = this.app;
-if (event.repeat) return;
+
 
 if(app.keyboard.isPressed(pc.KEY_Q)) {
+    while (pos.x +1 < this.entity.getLocalPosition()) {
     this.entity.translateLocal(-0.1,0,0);
+    }
 }
 if(app.keyboard.isPressed(pc.KEY_E)) {
     this.entity.translateLocal(0.1,0,0);
