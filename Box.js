@@ -20,7 +20,7 @@ var app = this.app;
 
 if(app.keyboard.isPressed(pc.KEY_Q)) {
     this.entity.translateLocal(-0.1,0,0);
-    return;
+    break;
 }
 if(app.keyboard.isPressed(pc.KEY_E)) {
     this.entity.translateLocal(0.1,0,0);
