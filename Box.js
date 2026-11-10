@@ -39,7 +39,7 @@ if(app.keyboard.isPressed(pc.KEY_D)) {
 }
 
 if (this.entity.anim) {
-        this.entity.anim.setBoolean('moving', moving);
+        this.entity.anim.setBoolean('CubeAction', moving);
     }
 
 var pos = this.entity.getLocalPosition();
