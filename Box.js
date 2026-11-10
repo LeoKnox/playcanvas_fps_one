@@ -38,6 +38,7 @@ if(app.keyboard.isPressed(pc.KEY_D)) {
     this.entity.rotateLocal(0,-5,0)
 }
 
+console.log(":L "+this.entity.anim?.baseLayer.activeState, moving);
 if (this.entity.anim) {
         this.entity.anim.setBoolean('CubeAction', moving);
     }
