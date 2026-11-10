@@ -21,7 +21,7 @@ var moving =
 
 if(app.keyboard.isPressed(pc.KEY_Q)) {
     this.entity.translateLocal(-0.1,0,0);
-    moving = true
+    this.entity.anim.setBoolean('punch', false);
 }
 if(app.keyboard.isPressed(pc.KEY_E)) {
     this.entity.translateLocal(0.1,0,0);
