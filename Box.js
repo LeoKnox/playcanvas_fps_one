@@ -17,7 +17,7 @@ this.playerPos =this.entity.getLocalPosition();
 
 var app = this.app;
 var moving =
-        app.keyboard.isPressed(pc.KEY_Q)
+        false
 
 if(app.keyboard.isPressed(pc.KEY_Q)) {
     this.entity.translateLocal(-0.1,0,0);
