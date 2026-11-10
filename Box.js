@@ -16,8 +16,7 @@ Box.prototype.update = function(dt) {
 this.playerPos =this.entity.getLocalPosition();
 
 var app = this.app;
-var moving =
-        false
+
 
 if(app.keyboard.isPressed(pc.KEY_Q)) {
     this.entity.translateLocal(-0.1,0,0);
@@ -38,9 +37,6 @@ if(app.keyboard.isPressed(pc.KEY_A)) {
 if(app.keyboard.isPressed(pc.KEY_D)) {
     this.entity.rotateLocal(0,-5,0)
 }
-
-
-        this.entity.anim.setBoolean('CubeAction', moving);
 
 
 var pos = this.entity.getLocalPosition();
