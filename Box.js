@@ -4,6 +4,8 @@ var Box = pc.createScript('box');
 Box.prototype.initialize = function() {
 this.torque=7;
 this.app.keyboard.on(pc.EVENT_KEYDOWN, this.onKeyDown, this)
+this.startPosition = this.entity.getLocalPosition().clone();
+this.startRotation = this.entity.getLocalRotation().clone();
 };
 
 Box.prototype.onKeyDown = function (event) {
@@ -53,10 +55,6 @@ this.entity.setLocalPosition(pos);
 }
 };
 
-Box.prototype.initialize = function() {
-    this.startPosition = this.entity.getLocalPosition().clone();
-    this.startRotation = this.entity.getLocalRotation().clone();
-};
 console.log(this.startRotation);
 Box.prototype.reset = function() {
     this.entity.setLocalPosition(this.startPosition);
