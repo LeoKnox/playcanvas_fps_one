@@ -39,7 +39,9 @@ if(app.keyboard.isPressed(pc.KEY_A)) {
 if(app.keyboard.isPressed(pc.KEY_D)) {
     this.entity.rotateLocal(0,-5,0)
 }
-
+if(app.keyboard.isPressed(pc.KEY_L)) {
+    this.entity.anim.setBoolean('moving', false);
+}
 
 var pos = this.entity.getLocalPosition();
 
