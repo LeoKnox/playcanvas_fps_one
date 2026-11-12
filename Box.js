@@ -40,6 +40,7 @@ if(app.keyboard.isPressed(pc.KEY_D)) {
     this.entity.rotateLocal(0,-5,0)
 }
 if(app.keyboard.isPressed(pc.KEY_L)) {
+    animEntity.anim.speed = 0;
     this.entity.anim.setBoolean('moving', true);
 }
 
