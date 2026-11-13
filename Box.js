@@ -40,8 +40,12 @@ if(app.keyboard.isPressed(pc.KEY_D)) {
     this.entity.rotateLocal(0,-5,0)
 }
 if(app.keyboard.isPressed(pc.KEY_L)) {
-    this.entity.anim.setBoolean('moving', !this.entity.anim.setBoolean);
-    this.entity.anim.speed = !this.entity.anim.setBoolean;
+    if (app.keyboard.wasPressed(pc.KEY_L)) {
+    this.entity.anim.setBoolean(
+        'moving',
+        !this.entity.anim.getBoolean('moving')
+    );
+}
 }
 
 var pos = this.entity.getLocalPosition();
