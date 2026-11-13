@@ -6,7 +6,7 @@ this.torque=7;
 this.app.keyboard.on(pc.EVENT_KEYDOWN, this.onKeyDown, this)
 this.startPosition = this.entity.getLocalPosition().clone();
 this.startRotation = this.entity.getLocalRotation().clone();
-this.moving = true;
+this.moving = false;
 };
 
 Box.prototype.onKeyDown = function (event) {
@@ -49,10 +49,8 @@ if(app.keyboard.isPressed(pc.KEY_D)) {
 }
 }*/
 if (app.keyboard.wasPressed(pc.KEY_L)) {
-    this.entity.anim.setBoolean(
-        'moving',
-        !this.entity.anim.getBoolean('moving')
-    );
+    this.moving = !this.moving;
+    this.entity.anim.setBoolean('moving', this.moving);
 }
 
 var pos = this.entity.getLocalPosition();
