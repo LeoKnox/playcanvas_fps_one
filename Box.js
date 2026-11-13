@@ -6,7 +6,7 @@ this.torque=7;
 this.app.keyboard.on(pc.EVENT_KEYDOWN, this.onKeyDown, this)
 this.startPosition = this.entity.getLocalPosition().clone();
 this.startRotation = this.entity.getLocalRotation().clone();
-this.moving = false;
+this.moving = true;
 };
 
 Box.prototype.onKeyDown = function (event) {
