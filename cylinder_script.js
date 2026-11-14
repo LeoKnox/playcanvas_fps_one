@@ -1,6 +1,8 @@
+var CreateBox = pc.createScript('createBox');
+
 const cylinder = new pc.Entity('Cylinder');
 cylinder.addComponent('model', { type: 'cylinder' });
-app.root.addChild(cylinder);
+this.root.addChild(cylinder);
 
 // Optional: position it and give it a colored material
 cylinder.setPosition(0, 0, 0);
