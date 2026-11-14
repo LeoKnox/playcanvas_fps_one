@@ -1,12 +1,11 @@
-var CreateBox = pc.createScript('createBox');
-
-CreateBox.prototype.initialize = function() {
-
-};
-
-CreateBox.prototype.update = function(dt) {
 const cylinder = new pc.Entity('Cylinder');
-cylinder.addComponent('render', { type: 'cylinder' });
+cylinder.addComponent('model', { type: 'cylinder' });
 app.root.addChild(cylinder);
-cylinder.setLocalPosition(0, 0, 0);
-};
+
+// Optional: position it and give it a colored material
+cylinder.setPosition(0, 0, 0);
+
+const material = new pc.StandardMaterial();
+material.diffuse.set(0.2, 0.6, 1);
+material.update();
+cylinder.model.model.meshInstances[0].material = material;
