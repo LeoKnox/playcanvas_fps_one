@@ -1,7 +1,19 @@
 var Box = pc.createScript('box');
 
+var KeyboardControls = pc.createScript('keyboardControls');
+
 // initialize code called once per entity
-Box.prototype.initialize = function() {
+KeyboardControls.prototype.initialize = function() {
+    this.app.keyboard.on(pc.EVENT_KEYDOWN, this.keyDown, this);
+    this.app.keyboard.on(pc.EVENT_KEYUP, this.keyUp, this);
+};
+
+KeyboardControls.prototype.update = function(dt) {
+    if (this.app.keyboard.wasPressed(pc.KEY_P) && (this.entity.anim.baseLayer.activeState !== 'moving')) {
+        this.entity.anim.setBoolean('moving', true);
+    }
+};
+/*Box.prototype.initialize = function() {
 this.torque=7;
 this.app.keyboard.on(pc.EVENT_KEYDOWN, this.onKeyDown, this)
 this.startPosition = this.entity.getLocalPosition().clone();
@@ -74,4 +86,4 @@ console.log(this.startRotation);
 Box.prototype.reset = function() {
     this.entity.setLocalPosition(this.startPosition);
     this.entity.setLocalRotation(this.startRotation);
-};
+};*/
