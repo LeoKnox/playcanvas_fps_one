@@ -51,8 +51,9 @@ if(app.keyboard.isPressed(pc.KEY_D)) {
 }
 }*/
 if (app.keyboard.wasPressed(pc.KEY_L)) {
-    this.moving = !this.moving;
-    this.entity.anim.setBoolean('moving', this.moving);
+    this.moving = true;
+    //this.moving = !this.moving;
+    //this.entity.anim.setBoolean('moving', this.moving);
 }
 
 var pos = this.entity.getLocalPosition();
