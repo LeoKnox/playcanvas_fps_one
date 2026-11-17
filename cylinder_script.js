@@ -1,6 +1,6 @@
 var CreateBox = pc.createScript('createBox');
 
-CreateBox.attributes.add('game_asset_01.glb', {
+CreateBox.attributes.add('game_asset_01', {
     type: 'asset',
     assetType: 'container'
 });
