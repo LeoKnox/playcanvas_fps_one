@@ -1,7 +1,7 @@
 var SpawnModel = pc.createScript('create_box');
 
 // Drag the generated Template asset into this slot in the Editor
-SpawnModel.attributes.add('modelTemplate', {
+SpawnModel.attributes.add('game_asset_01', {
     type: 'asset',
     assetType: 'template',
     title: 'Model Template'
