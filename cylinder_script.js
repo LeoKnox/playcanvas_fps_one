@@ -6,7 +6,7 @@ CreateBox.attributes.add('glbAsset', {
 });
 
 
-LoadGlb.prototype.initialize = function () {
+CreateBox.prototype.initialize = function () {
     var asset = this.glbAsset;
 
     if (!asset) {
