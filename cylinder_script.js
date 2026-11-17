@@ -1,14 +1,31 @@
 var CreateBox = pc.createScript('createBox');
 
-CreateBox.prototype.initialize = function () {
-    //var roller = new pc.Entity('Roller');
-    var roller = this.app.assets.find('game_asset_01');
-    roller.ready(function () {
-        var modelEntity = game_asset_01.resource.instantiateRenderEntity();
-        modelEntity.setLocalPosition(0, 0, 0);
-        this.app.root.addChild(modelEntity);
-    }.bind(this));
+CreateBox.attributes.add('glbAsset', {
+    type: 'asset',
+    assetType: 'container'
+});
 
-    roller.setLocalPosition(0, 1, 0);
-    this.app.root.addChild(roller);
+
+LoadGlb.prototype.initialize = function () {
+    var asset = this.glbAsset;
+
+    if (!asset) {
+        console.error('Assign a GLB Container asset to the script.');
+        return;
+    }
+
+    var app = this.app;
+
+    var addModel = function () {
+        var modelEntity = asset.resource.instantiateRenderEntity();
+        modelEntity.name = asset.name;
+        app.root.addChild(modelEntity);
+    };
+
+    if (asset.resource) {
+        addModel();
+    } else {
+        asset.once('load', addModel);
+        app.assets.load(asset);
+    }
 };
