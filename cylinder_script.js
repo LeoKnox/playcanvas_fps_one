@@ -1,6 +1,6 @@
 var CreateBox = pc.createScript('createBox');
 
-CreateBox.attributes.add('glbAsset', {
+CreateBox.attributes.add('roller', {
     type: 'asset',
     assetType: 'container'
 });
