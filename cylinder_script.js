@@ -1,6 +1,6 @@
 var CreateBox = pc.createScript('createBox');
 
-CreateBox.attributes.add('game_asset_01', {
+CreateBox.attributes.add('roller', {
     type: 'asset',
     assetType: 'container'
 });
